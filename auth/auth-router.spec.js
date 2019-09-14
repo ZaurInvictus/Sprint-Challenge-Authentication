@@ -15,25 +15,21 @@ describe("server", () => {
     const credentials = { username: "zaur", password: "123" };
 
     it("should return a status 201", () => {
-        let response
         return request(server)
         .post('/api/auth/register')
         .send(credentials)
         .then(res => {
-            response = res
-            expect(response.status).toBe(201)
+            expect(res.status).toBe(201)
         })
     });
 
     it('should return a welcome message', () => {
         const message = "Welcome zaur! You have been successfully registered!"
-        let response
         return request(server)
         .post('/api/auth/register')
         .send(credentials)
         .then(res => {
-            response = res
-            expect(response.body.message).toEqual(message)
+            expect(res.body.message).toEqual(message)
         })
     })
    })
@@ -44,26 +40,22 @@ describe("server", () => {
     const credentials = { username: "zaur", password: "123" };   
 
     it('should return a successful status code', () => {
-        let response
         return request(server)
         .post('/api/auth/login')
         .send(credentials)
         .then(res => {
-            response = res
-            expect(response.status).toBe(200)
+            expect(res.status).toBe(200)
         })
     })
 
     it('should return a welcome message', () => {
         let message = "Welcome zaur! Token"
         
-        let response
         return request(server)
         .post('/api/auth/login')
         .send(credentials)
         .then(res => {
-            response = res
-            expect(response.body.message).toEqual(message)
+            expect(res.body.message).toEqual(message)
         })
       })
      })

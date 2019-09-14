@@ -1,9 +1,9 @@
 const request = require('supertest')
 const db = require('../database/dbConfig.js')
 const server = require('../api/server')
-const Users = require('../jokes/users-model')
 
-describe("server", () => {
+
+describe("Server", () => {
 
   // REGISTER TEST
   describe("Register", () => {

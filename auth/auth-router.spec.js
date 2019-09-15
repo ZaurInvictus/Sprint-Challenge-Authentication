@@ -49,7 +49,7 @@ describe("Server", () => {
     })
 
     it('should return a welcome message', () => {
-        let message = "Welcome zaur! Token"
+        const message = "Welcome zaur! Token"
         
         return request(server)
         .post('/api/auth/login')

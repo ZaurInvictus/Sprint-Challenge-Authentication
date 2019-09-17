@@ -1,5 +1,7 @@
 # Sprint Challenge: Authentication - Dad Jokes
 
+# Install jest to test endpoints (jets was uninstalled due to incompatibility with react)
+
 ## Description
 
 In this challenge, you build a real wise-guy application. _Dad jokes_ are all the rage these days. Currently the application is trying to receive some `Dad Jokes`, however we are locked out.
@@ -40,11 +42,22 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] What is the purpose of using _sessions_?
 
+Sessions provide a way to persist data across requests. For example to persist authentication information so there is no need to re-enter credentials on every new request the client makes to the server.
+
 - [ ] What does bcrypt do to help us store passwords in a secure manner.
+
+The bcrypt hashing function always hashes passwords and there no way get the passwords back from those hashes.
 
 - [ ] What does bcrypt do to slow down attackers?
 
+Increases hashing cycles on purpose.
+
 - [ ] What are the three parts of the JSON Web Token?
+
+In its compact form, JSON Web Tokens consist of three parts separated by dots (.), which are:
+Header
+Payload
+Signature
 
 ## Minimum Viable Product
 

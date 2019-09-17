@@ -15,4 +15,14 @@ server.use(express.json());
 server.use('/api/auth', authRouter);
 server.use('/api/jokes', authenticate, jokesRouter);
 
+// TO RUN REACT APP ON http://localhost:5000/
+server.use(express.static(__dirname + '/../client/build'))
+
+
+// TO TEST ENDPOINT
+// server.get('/', (req, res) => {
+//   res.send("It's alive!")
+// })
+
+
 module.exports = server;
